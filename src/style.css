@@ -1,0 +1,105 @@
+.wrapper {
+  position: relative;
+  display: none;
+}
+
+ul {
+  width: 200px;
+  max-height: 250px;
+
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+li {
+  position: static;
+}
+li .wrapper {
+  position: absolute;
+  z-index: 10;
+  display: none;
+}
+li:hover > .wrapper {
+  display: block;
+}
+
+.container {
+    position: relative;
+    width: 300px;
+}
+
+.container .parent{
+    width: 300px;
+    height: 100px;
+    background-color: rebeccapurple;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: fixed;
+    color: white;
+}
+
+/* .parent p{
+    position: static;
+} */
+
+.parent .floater{
+    position: absolute;
+    z-index: 10;
+    display: none;
+    top: 0;
+    right: -120px;
+    color: red;
+    z-index: 9999999999;
+}
+
+.parent:hover{
+    position: absolute;
+    overflow: visible;
+}
+
+.parent p:hover > .floater{
+    display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+ul {
+  margin: 1em;
+  color: white;
+  font-family: sans-serif;
+  font-size: 16px;
+}
+
+li {
+  padding: 1em;
+}
+li ul {
+  margin: 0;
+}
+
+li .wrapper {
+  cursor: auto;
+}
+li .wrapper li {
+  padding: 0.5em;
+}
+
+li:nth-child(2n) {
+  background: goldenrod;
+}
+li:nth-child(2n + 1) {
+  background: grey;
+}
+li.parent {
+  background: aqua;
+  cursor: pointer;
+}

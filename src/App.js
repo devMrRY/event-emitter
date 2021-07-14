@@ -1,4 +1,5 @@
 import GrandParent from './components/GrandParent'
+import Socket from './components/Socket'
 
 function App() {
   return (
@@ -6,7 +7,8 @@ function App() {
       <h1>
         EVENT EMITTER
       </h1>
-      <GrandParent />
+      {/* <GrandParent /> */}
+      <Socket />
     </div>
   );
 }
